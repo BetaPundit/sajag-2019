@@ -92,8 +92,10 @@ a {
   margin-right: auto;
 }
 
-.speaker-container {
-  justify-content: center;
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 a:active,
