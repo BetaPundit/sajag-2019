@@ -86,16 +86,22 @@ audio:not([controls]) {
 template {
   display: none; }
 
-a {
-  background-color: transparent; 
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .flex-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+a {
+  background-color: transparent; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a:active,
@@ -6418,7 +6424,7 @@ div.loading img {
  * ---------------------------------------------------------------------------
  */
 /* Flexnav Base Styles */
-/*-===== Our styel  =====-*/
+/*-===== Our style  =====-*/
 .main-menu {
   background: #4dbfd9;
   padding-bottom: 60px;
@@ -6482,6 +6488,7 @@ nav {
   -webkit-transition: none;
   transition: none;
   -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
   overflow: hidden;
   margin: 0 auto;
   width: 100%;
@@ -6541,8 +6548,8 @@ nav {
     z-index: 999;
     top: 0;
     right: 0;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     display: inline-block;
     text-align: center;
     background: rgba(255, 255, 255, 0.1); }
@@ -6572,14 +6579,14 @@ nav {
     z-index: 999;
     top: 0;
     right: 0;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     display: inline-block;
     text-align: center; }
     .menu-button .touch-button .navicon {
       font-size: 16px;
       position: relative;
-      top: 1em;
+      top: 1.2em;
       color: #fff; }
 
 @media all and (min-width: 800px) {
@@ -6589,7 +6596,9 @@ nav {
     overflow: visible; }
     .flexnav.opacity {
       opacity: 1;
-      display: block; }
+      display: block; 
+      
+    }
     .flexnav.one-page {
       max-width: 1080px;
       right: auto; }

@@ -562,7 +562,7 @@
 									</div>
 								</form>
 								<div class="contact-btn">
-									<button class="btn btn-default rex-primary-btn-effect-No dark-color" id="submit-form" type="submit" value="Submit">Send</button>
+									<button class="btn btn-default rex-primary-btn-effect-No dark-color" id="submit-form" type="submit">Send</button>
 								</div>
 							</div>
 						</section>
@@ -603,31 +603,21 @@
 	</script>
 
 	<script>
-		 var constraints = {
-			Email: {
-				// Email is required
-				presence: true,
-				// and must be an email (duh)
-				email: true
-			},
-			Name: {
-				presence: true
-			},
-			Contact: {
-				presence: true,
-				length: {
-					minimum: 10,
-					maximum: 10
-				  },
-				  numericality: {
-					onlyInteger: true
+		if (screen.width <= 699) {
+			window.onscroll = function() {stickNav()};
+		
+			var navbar = document.getElementById("navbar");
+			var sticky = navbar.offsetTop;
+			
+			function stickNav() {
+				if (window.pageYOffset >= sticky) {
+					navbar.classList.add("sticky")
+				} else {
+					navbar.classList.remove("sticky");
 				}
-			},
-			Message:{
-				presence: true
 			}
-		}
-	</script>
+		}		
+	</script>	
 
 	<script src="./assets/js/jquery.js"></script>
 	<script src="./assets/js/grid.js"></script>
@@ -642,7 +632,6 @@
 	<script src="./assets/js/masonry.pkgd.min.js"></script>
 	<script src="./assets/js/skrollr.js"></script>
 	<script src="./assets/js/script.js"></script>
-	<script src="./assets/js/validate.min.js"></script>
 
   </body>
 </html>
