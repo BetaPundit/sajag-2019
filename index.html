@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,7 +7,7 @@
 	<title>Sajag 2019</title>
 	<meta name="description" content="sajag 2019, svvv">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -47,17 +47,32 @@
 				</div>
 			</div>
 		</div>
+
+		<style>
+			/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+			.sticky {
+				position: fixed;
+				top: 0;
+				width: 100%;
+			}
+
+			/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position
+			at the top of the page (position:fixed and top:0) */
+			.sticky + .main {
+				padding-top: 60px	
+			}
+		</style>
 	</header>
 
 	<!-- nav section -->
-	<div class="main-menu nav-down" id="navbar">
-		<div id="rex-sticky-sticky-wrapper" class="sticky-wrapper" style="height: 60px;">
+	<div class="main-menu" id="navbar">
+		<div id="rex-sticky-wrapper" class="sticky-wrapper" style="height: 60px;">
 			<div id="rex-sticky">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12 menu-section">
 							<div class="menu-button one-page" style="font-size:1.5em;">Menu<span class="touch-button"><i class="navicon fa fa-plus"></i></span></div>
-							<nav style="background-color: #4dbfd9; text-align:center;">
+							<nav style="background-color: #4dbfd9;">
 								<ul id="navigation-menu" data-breakpoint="992" class="flexnav one-page with-js opacity lg-screen">
 									<li class=""><a href="#home">Home</a></li>
 									<li class=""><a href="#about">About</a></li>
@@ -83,7 +98,7 @@
 					<div class="about">
 						<!-- About section first style -->
 
-						<div class="hero" style="background: rgba(0, 0, 0, 0.5); ">
+						<div class="hero" style="background: rgba(0, 0, 0, 0.4); ">
 							<div class="hero-inner">
 								<a class="hero-logo"><img src="./assets/img/Logo.png" alt="Logo Image"></a>
 								<div class="logo">
@@ -93,30 +108,30 @@
 									<div class="hero-btn">
 										<a class="btn btn-default rex-primary-btn-effect-No" href="#contact" role="button"><span>Contact</span></a>
 										<button class="btn btn-default rex-primary-btn-effect-No" role="button" data-toggle="modal" data-target="#registerForm">Register</button>
-									
-									<!-- Modal Register Form -->
-									<div class="modal fade" id="registerForm" tabindex="-1" role="dialog" aria-labelledby="registerForm"
-									 aria-hidden="true">
-										<div class="modal-dialog modal-dialog-centered" role="document">
-											<div class="modal-content">
-												<div class="modal-header">
-													<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-														<span aria-hidden="true">&times;</span>
-													</button>
-												</div>
-												<div class="modal-body">
-													...
-												</div>
-												<div class="modal-footer">
-													<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-													<button type="button" class="btn btn-primary">Save changes</button>
+
+										<!-- Modal Register Form -->
+										<div class="modal fade" id="registerForm" tabindex="-1" role="dialog" aria-labelledby="registerForm"
+										 aria-hidden="true">
+											<div class="modal-dialog modal-dialog-centered" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true">&times;</span>
+														</button>
+													</div>
+													<div class="modal-body">
+														...
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+														<button type="button" class="btn btn-primary">Save changes</button>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
 
-								</div>
+									</div>
 
 								</div>
 							</div>
@@ -384,7 +399,7 @@
 											<p>SVIIT, SVVV, Indore</p>
 										</div>
 									</div>
-									
+
 									<div class="listing-content">
 										<div class="col-md-2 list-img">
 											<div class="experience-date">
@@ -597,9 +612,11 @@
 						<div class="row">
 							<div class="col-md-12">
 								<br>
-								<p style="color:#e5e5e5; padding-left: 10px; padding-right: 10px;">© Sajag-2019 Official Website. All Rights Reserved! <br>
-								<span class="fa fa-code"></span> with <span class="fa fa-heart" style="color: rgb(245, 80, 80)">							
-									</span> by Rachit Pahwa, <a href="http://aditya-sharma.me" style="all:unset; cursor:pointer;">Aditya Sharma</a> & Sameer Agrawal.
+								<p style="color:#e5e5e5; padding-left: 10px; padding-right: 10px;">© Sajag-2019 Official Website. All Rights
+									Reserved! <br>
+									<span class="fa fa-code"></span> with <span class="fa fa-heart" style="color: rgb(245, 80, 80)">
+									</span> by Rachit Pahwa, <a href="http://aditya-sharma.me" style="all:unset; cursor:pointer;">Aditya Sharma</a>
+									& Sameer Agrawal.
 								</p>
 							</div>
 						</div>
@@ -609,6 +626,7 @@
 		</div>
 	</section>
 
+	<!-- Contact form submit script -->
 	<script type="text/javascript">
 		var $form = $('form#contact-form'),
 			url = 'https://script.google.com/macros/s/AKfycbxTLzVmxHWlm6knCpG_apnU_fruzsA2H_RPBMlH49qIc_X95Vk/exec'
@@ -625,6 +643,24 @@
 			});
 			console.log(formData);
 		})
+	</script>
+
+	<!-- Fixed navbar script -->
+	<script>
+		window.onscroll = function () {
+			scrollFunc()
+		};
+
+		var navbar = document.getElementById("navbar");
+		var sticky = navbar.offsetTop;
+
+		function scrollFunc() {
+			if (window.pageYOffset >= sticky) {
+				navbar.classList.add("sticky")
+			} else {
+				navbar.classList.remove("sticky");
+			}
+		}
 	</script>
 
 	<script>
@@ -662,7 +698,6 @@
 	<script src="./assets/js/typed.min.js"></script>
 	<script src="./assets/js/jquery.scrollUp.min.js"></script>
 	<script src="./assets/js/scroll.js"></script>
-	<script src="./assets/js/jquery.sticky.js"></script>
 	<script src="./assets/js/jquery.flexnav.min.js"></script>
 	<script src="./assets/js/masonry.pkgd.min.js"></script>
 	<script src="./assets/js/skrollr.js"></script>

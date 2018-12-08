@@ -6450,11 +6450,11 @@ div.loading img {
 /*-===== Our style  =====-*/
 .main-menu {
   background: #4dbfd9;
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
   text-align: center; }
 
 nav {
-  min-height: 55px;
+  min-height: 60px;
   box-shadow: 0.139px 0.99px 3px 1px rgba(0, 1, 1, 0.118); }
 
 .one-page .active .navicon {
@@ -7659,7 +7659,7 @@ footer {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
-  .nav-up #rex-sticky {
+  /* .nav-up #rex-sticky {
     margin-top: -60px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
@@ -7677,7 +7677,7 @@ footer {
     .nav-down > .is-sticky .navigation ul > li {
       background: #4dbfd9; }
     .nav-down > .is-sticky .navigation ul li ul li {
-      background: #4dbfd9; }
+      background: #4dbfd9; } */
   .about-section, .section-block, .single-blog-list {
     padding: 28px 68px; }
   .hero .hero-btn > a {
