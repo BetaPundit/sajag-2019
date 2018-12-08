@@ -6199,8 +6199,7 @@ a:focus {
 }
 
 .bg1 {
-  background: url('../img/cybersecurity-lock2.jpeg') no-repeat center center fixed; 
-  /* background-position: center; */
+  background: url('../img/cybersecurity.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -6212,7 +6211,6 @@ a:focus {
   left: 0;
   right: 0;
   z-index: -10;
-  /* overflow-x: hidden; */
 }
 
 .font-weight-light {
