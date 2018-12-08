@@ -21,6 +21,8 @@
 	 
 	<script src="./assets/js/modernizr.js"></script>
 	<script src="./assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.validate.js"></script>
+	<script src="assets/js/jquery.validate.min.js"></script>
 </head>
 
 <body class="single" data-gr-c-s-loaded="true">
@@ -548,7 +550,7 @@
 									<div class="row">
 										<div class="col-md-6">
 											<div class="form-group">
-												<input type="text" class="form-control" name="Name" placeholder="Name" required>
+												<input type="text" class="form-control" name="Name" minlength="4" placeholder="Name" required>
 											</div>
 											<div class="form-group">
 												<input type="email" class="form-control" name="Email" placeholder="Email" required>
@@ -561,10 +563,11 @@
 											<textarea class="form-control" rows="6" name="Message" placeholder="Message" required></textarea>
 										</div>
 									</div>
+									<div class="contact-btn">
+										<button class="btn btn-default rex-primary-btn-effect-No dark-color" id="submit-form" type="submit">Send</button>
+									</div>
 								</form>
-								<div class="contact-btn">
-									<button class="btn btn-default rex-primary-btn-effect-No dark-color" id="submit-form" type="submit">Send</button>
-								</div>
+								
 							</div>
 						</section>
 					</div>
@@ -585,9 +588,11 @@
 	</section>
 
 	<script type="text/javascript">
+		
 		var $form = $('form#contact-form'),
 			url = 'https://script.google.com/macros/s/AKfycbxTLzVmxHWlm6knCpG_apnU_fruzsA2H_RPBMlH49qIc_X95Vk/exec'
 		$('#submit-form').on('click', function (e) {
+			$("#contact-form").validate();
 			e.preventDefault();
 			var formData = $.ajax({
 				url: url,
