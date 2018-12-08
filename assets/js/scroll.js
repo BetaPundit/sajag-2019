@@ -30,9 +30,9 @@ function hasScrolled() {
         // $('.main-menu').removeClass('nav-down').addClass('nav-up');
     } else {
         // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $('.main-menu').removeClass('nav-up').addClass('nav-down');
-        }
+        // if(st + $(window).height() < $(document).height()) {
+        //     $('.main-menu').removeClass('nav-up').addClass('nav-down');
+        // }
     }
     
     lastScrollTop = st;

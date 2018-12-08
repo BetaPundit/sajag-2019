@@ -108,12 +108,7 @@
 }
 @media only screen and (max-width: 991px)
 {
-	.header_nav,
-	.search_container,
-	.header_social
-	{
-		display: none !important;
-	}
+	
 	.header
 	{
 		position: fixed;
